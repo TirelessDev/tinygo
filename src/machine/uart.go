@@ -1,10 +1,18 @@
-// +build atmega esp nrf sam sifive stm32 k210 nxp
+// +build atmega esp nrf sam sifive stm32 k210 nxp rp2040
 
 package machine
 
 import "errors"
 
 var errUARTBufferEmpty = errors.New("UART buffer empty")
+
+type UARTParity int
+
+const (
+	ParityNone UARTParity = 0
+	ParityEven UARTParity = 1
+	ParityOdd  UARTParity = 2
+)
 
 type UARTConfig struct {
 	BaudRate uint32
