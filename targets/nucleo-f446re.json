@@ -1,0 +1,11 @@
+{
+    "inherits": ["cortex-m4"],
+    "build-tags": ["nucleof446re", "stm32f446", "stm32f4", "stm32"],
+    "linkerscript": "targets/stm32f446xe.ld",
+    "extra-files": [
+      "src/device/stm32/stm32f446xe.s"
+    ],
+    "flash-method": "openocd",
+    "openocd-interface": "stlink-v2-1",
+    "openocd-target": "stm32f446"
+  }
